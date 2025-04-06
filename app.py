@@ -11,7 +11,8 @@ app = Flask(__name__)
 genai.configure(api_key=os.getenv("AIzaSyAfLxYeFljz-Dv-bNY4CjOqEFw9jpMRviY"))
 
 # Initialize Gemini Vision model
-model = genai.GenerativeModel("gemini-pro-vision")
+model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
